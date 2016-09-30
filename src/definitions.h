@@ -28,7 +28,7 @@
 #define STATUS_SERVER_DEVELOPERS "Mattyx14, Brewsterl, Malucooo and The Forgotten Server Developers"
 #define GIT_REPO "https://github.com/mattyx14/otxserver/tree/otxserv3/"
 
-#define CLIENT_VERSION_MIN 1094
+#define CLIENT_VERSION_MIN 1097
 #define CLIENT_VERSION_MAX 1098
 #define CLIENT_VERSION_STR "10.98"
 

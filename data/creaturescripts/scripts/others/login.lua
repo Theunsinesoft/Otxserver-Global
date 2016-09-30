@@ -112,5 +112,6 @@ function onLogin(player)
 		onMovementRemoveProtection(playerId, player:getPosition(), 10)
 	end
 	db.query('INSERT INTO `players_online` (`player_id`) VALUES (' .. playerId .. ')')
+	db.query("UPDATE `players` SET `cast` = 0 WHERE `id` = " ..playerId .. ";")
 	return true
 end

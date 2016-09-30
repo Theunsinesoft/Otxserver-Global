@@ -92,6 +92,7 @@
     <event type="preparedeath" name="monster heal2" script="bosses/monster heal2.lua"/>
 
 	<!-- Others -->
+    <event type="login" name="AddonsMounts" script="others/addonmount.lua"/>
 	<event type="login" name="PlayerLogin" script="others/login.lua" />
 	<event type="login" name="FirstItems" script="others/firstitems.lua" />
 	<event type="login" name="RegenerateStamina" script="others/regeneratestamina.lua" />

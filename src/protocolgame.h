@@ -270,6 +270,7 @@ class ProtocolGame final : public ProtocolGameBase
 		void sendOpenPrivateChannel(const std::string& receiver);
 		void sendToChannel(const Creature* creature, SpeakClasses type, const std::string& text, uint16_t channelId);
 		void sendPrivateMessage(const Player* speaker, SpeakClasses type, const std::string& text);
+		void sendCancelTarget();
 		void sendIcons(uint16_t icons);
 		void sendFYIBox(const std::string& message);
 
@@ -282,7 +283,6 @@ class ProtocolGame final : public ProtocolGameBase
 		void sendQuestLine(const Quest* quest);
 
 		void sendChangeSpeed(const Creature* creature, uint32_t speed);
-		void sendCancelTarget();
 		void sendCreatureOutfit(const Creature* creature, const Outfit_t& outfit);
 		void sendTextMessage(const TextMessage& message);
 		void sendReLoginWindow(uint8_t unfairFightReduction);

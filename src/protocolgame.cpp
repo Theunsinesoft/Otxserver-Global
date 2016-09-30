@@ -380,6 +380,9 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 	msg.skipBytes(1); // gamemaster flag
 
 	std::string sessionKey = msg.getString();
+	if (operatingSystem == CLIENTOS_FLASH) {
+		sessionKey = IOLoginData::generateFlashSessionKey(sessionKey);
+	}
 	size_t pos = sessionKey.find('\n');
 	if (pos == std::string::npos) {
 		disconnectClient("You must enter your account name.");

@@ -119,6 +119,28 @@ bool IOLoginData::loginserverAuthentication(const std::string& name, const std::
 	return true;
 }
 
+std::string IOLoginData::generateFlashSessionKey(const std::string& token)
+{
+	if (token.empty()) {
+		return 0;
+	}
+
+	Database* db = Database::getInstance();
+
+	std::ostringstream query;
+	query << "SELECT `name`, `password` FROM `accounts` WHERE `authToken` = " << db->escapeString(token);
+	DBResult_ptr result = db->storeQuery(query.str());
+	if (!result) {
+		return "0 \n 0"; // Dirty fix for debug on flash client multi-client
+	}
+
+	std::string accountName = result->getString("name");
+	std::string password = result->getString("password");
+
+	return accountName + "\n" + password;
+}
+
+
 uint32_t IOLoginData::gameworldAuthentication(const std::string& accountName, const std::string& password, std::string& characterName)
 {
 	Database* db = Database::getInstance();
