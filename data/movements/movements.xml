@@ -111,7 +111,8 @@
 	<movevent event="StepOut" actionid="50025" script="others/thaislighthousequest.lua" />
 	<movevent event="AddItem" tileitem="1" fromid="20932" toid="20937" script="others/bloodtiles.lua" />
 	<movevent event="AddItem" tileitem="1" itemid="1485" script="others/tombCoalBasin.lua" />
-        <movevent event="StepIn" actionid="7000" script="others/zombieEventTeleport.lua" />
+    <movevent event="StepIn" actionid="7000" script="others/zombieEventTeleport.lua" />
+	<movevent event="StepIn" actionid="25019" script="others/staminatreiner.lua" />
 
 	<!-- Ferumbras Quest by Ciroc -->
 	<movevent event="StepIn" actionid="45790" script="ferumbrasEntrada.lua"/>
