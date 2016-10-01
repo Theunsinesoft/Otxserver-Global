@@ -57,7 +57,8 @@ local addons ={
 	[28466] = {846, 845}, -- Rift Warrior
 	[28467] = {853, 852},  -- Winter Warden
 	[28468]	= {874, 873}, -- Philosopher
-	[28469]	= {884, 885} -- Arena Champion
+	[28469]	= {884, 885}, -- Arena Champion
+	[28470]	= {899, 900} -- Lupine Warden
 
 	}
 	
@@ -172,7 +173,10 @@ local mounts ={
 	[80095] = 97, -- Mould Shell
 	[80096] = 98, -- Reed Lurker
 	[80097] = 99, -- Neon Sparkid
-	[80098] = 100 -- Vortexion
+	[80098] = 100, -- Vortexion
+	[80099] = 101, -- Wolf White
+	[80100] = 102, -- Wolf Black
+	[80101] = 103 -- Winter Wolf
 
 	}
 		
