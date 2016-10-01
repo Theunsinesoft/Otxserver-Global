@@ -1,8 +1,22 @@
+local config = {
+    daily = false,
+	centerGoldenRoomPosition = Position(33529, 32333, 12)
+	}
+	
 function onUse(cid, item, fromPosition, itemEx)
 	local player = Player(cid)
 	if not player then
 		return true
 	end
+		local specs, spec = Game.getSpectators(config.centerGoldenRoomPosition, false, false, 16, 16, 16, 16)
+		for i = 1, #specs do
+			spec = specs[i]
+			if spec:isPlayer() then
+				return true
+			end
+
+			spec:remove()
+		end
         if(item.itemid == 22607) then
 		if(itemEx.itemid == 22641) then
 	        if player:getStorageValue(1) then
@@ -21,6 +35,7 @@ function onUse(cid, item, fromPosition, itemEx)
 					doTeleportThing(getTopCreature(pos3).uid, {x = 33528, y = 32341, z = 12})
 					doTeleportThing(getTopCreature(pos4).uid, {x = 33528, y = 32341, z = 12})
 					doTeleportThing(getTopCreature(pos5).uid, {x = 33528, y = 32341, z = 12})
+	           doSummonCreature("prince drazzak", {x=33526, y=32331, z=12})
 		doRemoveItem(item.uid, 1)
 			end
 		    end
